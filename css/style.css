@@ -5902,6 +5902,12 @@ section {
   background-position: center;
   background-size: 100% auto;
   background-attachment: fixed;
+  background-position: top -25vmin center;
+}
+@media (max-width: 767px) {
+  .company-map {
+    background-attachment: unset;
+  }
 }
 .company-map__underlayer {
   position: fixed;
@@ -6873,11 +6879,23 @@ section {
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  -o-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
 }
 @media (max-width: 1279px) {
   .header__menu-mobile {
     visibility: visible;
     opacity: 1;
+    -webkit-transition-property: opacity, visibility;
+    -o-transition-property: opacity, visibility;
+    transition-property: opacity, visibility;
+    -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+    -webkit-transition-duration: 0s;
+         -o-transition-duration: 0s;
+            transition-duration: 0s;
   }
 }
 @media (max-width: 767px) {
@@ -7097,10 +7115,14 @@ section {
 .header:not(.is--visible) + .header__menu-mobile {
   visibility: hidden;
   opacity: 0;
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
 }
 @media (max-width: 1023px) {
   .header:not(.is--visible) + .header__menu-mobile {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -7112,6 +7134,8 @@ section {
 }
 .header.opened + .header__menu-mobile {
   max-height: 100vh;
+  visibility: visible;
+  opacity: 1;
 }
 .header.opened + .header__menu-mobile .header__menu-mobile-container {
   padding-top: 112px;

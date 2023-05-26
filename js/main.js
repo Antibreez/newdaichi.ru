@@ -239,7 +239,6 @@ $('.select-field select').each((idx, item) => {
   })
 })
 
-
 // $('.company-map__underlayer').parallax({
 //   mirrorContainer: '.company-map__mirror-container',
 //   // naturalWidth: '2350px',
@@ -324,6 +323,21 @@ $(document).on('click', '.company-map__popup-close', function () {
   $(this).parents('.company-map__place').removeClass('opened')
 })
 
+
+const headerMenuMobile = new PerfectSB($('.header__menu-mobile'))
+
+$(document).on('click', '.header__menu-button', function () {
+  $(this).parents('.header').toggleClass('opened')
+
+  if ($(this).parents('.header').hasClass('opened')) {
+    setTimeout(() => {
+      headerMenuMobile.init()
+    }, 500)
+  } else {
+    headerMenuMobile.destroy()
+  }
+})
+
 $(window).on('load', function () {
   $('.input-field input').each((idx, item) => {
     if ($(item).val().trim() !== '') {
@@ -360,20 +374,6 @@ $(document).on('click', '.input-field__clear-button', function (e) {
 //   const $target = $(e.currentTarget);
 
 // })
-
-const headerMenuMobile = new PerfectSB($('.header__menu-mobile'))
-
-$(document).on('click', '.header__menu-button', function () {
-  $(this).parents('.header').toggleClass('opened')
-
-  if ($(this).parents('.header').hasClass('opened')) {
-    setTimeout(() => {
-      headerMenuMobile.init()
-    }, 500)
-  } else {
-    headerMenuMobile.destroy()
-  }
-})
 
 class CityModal {
   constructor() {
