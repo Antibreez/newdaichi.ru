@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="preload" href="fonts/suisseintl-light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/suisseintl-medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/suisseintl-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/suisseintl-semibold.woff2" as="font" type="font/woff2" crossorigin />
+    <script src="./js/vendor.js"></script>
+    <title>Daichi</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__inner">
+          <div class="header__inner-wrap">
+            <button class="header__menu-button" type="button" aria-label="Открыть меню">
+              <svg><use xlink:href="./img/sprite.svg#menu-burger"></use></svg>
+              <svg><use xlink:href="./img/sprite.svg#close"></use></svg>
+            </button>
+            <a href="#" class="header__logo">
+              <img src="./img/daichi-logo.svg" alt="Daichi" />
+            </a>
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link ">Продукция</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link ">Бренды</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link ">Поддержка</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link ">IoT решения</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link ">О компании</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link ">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <a class="header__location-link is--for-desktop" href="#city-select" data-fancybox>
+              <svg><use xlink:href="./img/sprite.svg#location"></use></svg>
+              Москва
+            </a>
+            <a class="header__search-button" href="#search-main" aria-label="Поиск">
+              <svg><use xlink:href="./img/sprite.svg#search"></use></svg>
+            </a>
+            <button class="header__partnership-button button button--small">Стать партнёром</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header__menu-mobile">
+      <div class="header__menu-mobile-container">
+        <div class="header__menu-mobile-column">
+          <nav class="header__menu-mobile-catalog">
+            <h2 class="h7 header__menu-mobile-catalog-title">Продукция</h2>
+            <ul class="header__menu-mobile-catalog-list">
+              <li class="header__menu-mobile-catalog-item">
+                <a href="#" class="header__menu-mobile-catalog-link">Бытовое кондиционирование</a>
+              </li>
+              <li class="header__menu-mobile-catalog-item">
+                <a href="#" class="header__menu-mobile-catalog-link">Мульти-сплит-системы</a>
+              </li>
+              <li class="header__menu-mobile-catalog-item">
+                <a href="#" class="header__menu-mobile-catalog-link">Полупромышленные сплит-системы</a>
+              </li>
+              <li class="header__menu-mobile-catalog-item">
+                <a href="#" class="header__menu-mobile-catalog-link">Мультизональные системы</a>
+              </li>
+              <li class="header__menu-mobile-catalog-item">
+                <a href="#" class="header__menu-mobile-catalog-link">Отопление</a>
+              </li>
+              <li class="header__menu-mobile-catalog-item">
+                <a href="#" class="header__menu-mobile-catalog-link">Промышленные системы</a>
+              </li>
+              <li class="header__menu-mobile-catalog-item">
+                <a href="#" class="header__menu-mobile-catalog-link">Вентиляция</a>
+              </li>
+              <li class="header__menu-mobile-catalog-item">
+                <a href="#" class="header__menu-mobile-catalog-link">Увлажнение и обработка воздуха</a>
+              </li>
+              <li class="header__menu-mobile-catalog-item">
+                <a href="#" class="header__menu-mobile-catalog-link">IoT решения для климата</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__menu-mobile-column">
+          <nav class="header__menu-mobile-nav">
+            <ul class="header__menu-mobile-nav-list">
+              <li class="header__menu-mobile-nav-item"><a href="#" class="header__menu-mobile-nav-link">Бренды</a></li>
+              <li class="header__menu-mobile-nav-item">
+                <a href="#" class="header__menu-mobile-nav-link">Поддержка</a>
+              </li>
+              <li class="header__menu-mobile-nav-item">
+                <a href="#" class="header__menu-mobile-nav-link">IoT решения для климата</a>
+              </li>
+              <li class="header__menu-mobile-nav-item"><a href="#" class="header__menu-mobile-nav-link">Новости</a></li>
+              <li class="header__menu-mobile-nav-item">
+                <a href="#" class="header__menu-mobile-nav-link">О компании</a>
+              </li>
+              <li class="header__menu-mobile-nav-item">
+                <a href="#" class="header__menu-mobile-nav-link">Контакты</a>
+              </li>
+              <li class="header__menu-mobile-nav-item">
+                <a href="#" class="header__menu-mobile-nav-link">Стать партнёром</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__menu-mobile-column">
+          <div class="header__menu-mobile-contact">
+            <p class="header__menu-mobile-contact-title">Служба поддержки</p>
+            <a href="tel:+78002014584" class="header__menu-mobile-contact-link">+7 (800) 201–45–84</a>
+          </div>
+          <div class="header__menu-mobile-contact">
+            <p class="header__menu-mobile-contact-title">Офис компании</p>
+            <a href="tel:+74957373733" class="header__menu-mobile-contact-link">+7 495 737-37-33</a>
+          </div>
+          <div class="header__menu-mobile-socials">
+            <a href="#" class="header__menu-mobile-social-link">
+              <span class="visually-hidden">Аккаунт ВК</span>
+              <svg><use xlink:href="./img/sprite.svg#vk"></use></svg>
+            </a>
+            <a href="#" class="header__menu-mobile-social-link">
+              <span class="visually-hidden">Аккаунт Youtube</span>
+              <svg><use xlink:href="./img/sprite.svg#youtube"></use></svg>
+            </a>
+          </div>
+          <a class="header__location-link" href="#city-select" data-fancybox>
+            <svg><use xlink:href="./img/sprite.svg#location"></use></svg>
+            Москва
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: none">
+      <form class="modal--city modal form" id="city-select">
+        <div class="h5 modal__title">
+          <button class="modal__title-close-button mobile-only" type="button" data-fancybox-close>
+            <svg>
+              <use xlink:href="./img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <span>Выберите город</span>
+        </div>
+        <div class="modal__body">
+          <div class="modal__city-search input-field is--search">
+            <div class="input-field__icon">
+              <svg><use xlink:href="./img/sprite.svg#search"></use></svg>
+            </div>
+            <input type="text" name="name2" id="name2" placeholder="Поиск" />
+            <span class="input-field__outline"></span>
+            <button type="button" class="input-field__clear-button">
+              <svg><use xlink:href="./img/sprite.svg#close"></use></svg>
+            </button>
+          </div>
+
+           
+          <ul class="modal__city-list">
+            <li class="modal__city-item">
+              <a class="modal__city-link active" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Санкт-Петербург</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Екатеринбург</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Нижний Новгород</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Новосибирск</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Ростов-на-Дону</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Самара</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Уфа</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Челябинск</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+            <li class="modal__city-item">
+              <a class="modal__city-link" href="#">Москва</a>
+            </li>
+          </ul>
+          
+        </div>
+      </form>
+    </div>
+
+    <div class="modal-custom__overlay"></div>
+    <div class="modal-custom">
+      <form class="modal--search modal form" id="search-main">
+        <div class="modal__body">
+          <div class="modal__search-main-row">
+            <div class="modal__search-main input-field is--search">
+              <div class="input-field__icon">
+                <svg><use xlink:href="./img/sprite.svg#search"></use></svg>
+              </div>
+              <input type="text" name="name2" id="name2" placeholder="Поиск" />
+              <span class="input-field__outline"></span>
+              <button type="button" class="input-field__clear-button">
+                <svg><use xlink:href="./img/sprite.svg#close"></use></svg>
+              </button>
+            </div>
+            <button type="button" class="modal__search-main-close button-secondary button--small">Закрыть</button>
+          </div>
+          <div class="modal__search-main-result">
+            
+            <h2 class="h7 modal__search-main-result-title">Быстрые ссылки</h2>
+            <ul class="modal__search-main-result-list">
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Облачный кондиционер</a>
+              </li>
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Daikin Emura</a>
+              </li>
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Мультизональные системы</a>
+              </li>
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Мультизональные системы</a>
+              </li>
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Мультизональные системы</a>
+              </li>
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Мультизональные системы</a>
+              </li>
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Мультизональные системы</a>
+              </li>
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Мультизональные системы</a>
+              </li>
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Мультизональные системы</a>
+              </li>
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Мультизональные системы</a>
+              </li>
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Мультизональные системы</a>
+              </li>
+              <li class="modal__search-main-result-item">
+                <a href="#" class="modal__search-main-result-link">Мультизональные системы</a>
+              </li>
+            </ul>
+             
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <script src="./js/main.js"></script>
+
+    <script>
+      cityModal.onInput(function (val) {
+        // Выполняем запрос со значением инпута val
+        $.ajax('https://jsonplaceholder.typicode.com/todos/1').done(data => {
+          console.log(val)
+        })
+      })
+
+      cityModal.onSelect(function (val) {
+        // Выполняем запрос со значением города val
+        $.ajax('https://jsonplaceholder.typicode.com/todos/1').done(data => {
+          console.log(val)
+          // После завершения запроса закрываем модалку
+          $.fancybox.close()
+        })
+      })
+
+      cityModal.onClear(function () {
+        // Запрос при очистке поля поиска
+        $.ajax('https://jsonplaceholder.typicode.com/todos/1').done(data => {
+          console.log('Search clear')
+        })
+      })
+    </script>
+  </body>
+</html>
