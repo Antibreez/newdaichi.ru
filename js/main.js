@@ -324,20 +324,6 @@ $(document).on('click', '.company-map__popup-close', function () {
   $(this).parents('.company-map__place').removeClass('opened')
 })
 
-const headerMenuMobile = new PerfectSB($('.header__menu-mobile'))
-
-$(document).on('click', '.header__menu-button', function () {
-  $(this).parents('.header').toggleClass('opened')
-
-  if ($(this).parents('.header').hasClass('opened')) {
-    setTimeout(() => {
-      headerMenuMobile.init()
-    }, 500)
-  } else {
-    headerMenuMobile.destroy()
-  }
-})
-
 $(window).on('load', function () {
   $('.input-field input').each((idx, item) => {
     if ($(item).val().trim() !== '') {
@@ -375,6 +361,20 @@ $(document).on('click', '.input-field__clear-button', function (e) {
 
 // })
 
+const headerMenuMobile = new PerfectSB($('.header__menu-mobile'))
+
+$(document).on('click', '.header__menu-button', function () {
+  $(this).parents('.header').toggleClass('opened')
+
+  if ($(this).parents('.header').hasClass('opened')) {
+    setTimeout(() => {
+      headerMenuMobile.init()
+    }, 500)
+  } else {
+    headerMenuMobile.destroy()
+  }
+})
+
 class CityModal {
   constructor() {
     this.el = $('#city-select')
@@ -411,8 +411,6 @@ if ($('.page-main').length && $('.main-slider').length) {
 
   $(document).on('scroll', function () {
     const offset = $('.main-slider').offset().top + mainSliderHeight - $(document).scrollTop()
-
-    console.log(offset)
 
     if (offset < 0) {
       $('.header').addClass('is--visible')
