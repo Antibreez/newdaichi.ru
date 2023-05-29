@@ -173,6 +173,17 @@ class PerfectSB {
 
 addFocusEventListeners(['.input-field input', '.select-field .select2-selection', 'button', 'a'])
 
+let vh = window.innerHeight * 0.01
+
+const onResize = () => {
+  let vh = window.innerHeight * 0.01
+  $('html').css('--vh', `${vh}px`)
+}
+
+$('html').css('--vh', `${vh}px`)
+
+$(window).on('resize', debounce(onResize, 1000))
+
 // const fancyboxContainer = new PerfectSB($('.fancybox-slide'))
 // const searchMainList = new PerfectSB('.modal__search-main-result-list')
 const citySearchList = new PerfectSB($('.modal__city-list'))
@@ -238,6 +249,7 @@ $('.select-field select').each((idx, item) => {
     $(this).attr('data-selected', '')
   })
 })
+
 
 // $('.company-map__underlayer').parallax({
 //   mirrorContainer: '.company-map__mirror-container',
@@ -322,7 +334,6 @@ $(document).on('click', function (e) {
 $(document).on('click', '.company-map__popup-close', function () {
   $(this).parents('.company-map__place').removeClass('opened')
 })
-
 
 const headerMenuMobile = new PerfectSB($('.header__menu-mobile'))
 

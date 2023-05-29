@@ -7133,7 +7133,7 @@ section {
   display: block;
 }
 .header.opened + .header__menu-mobile {
-  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
   visibility: visible;
   opacity: 1;
 }
