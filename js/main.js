@@ -182,7 +182,7 @@ const onResize = () => {
 
 $('html').css('--vh', `${vh}px`)
 
-$(window).on('resize', debounce(onResize, 1000))
+$(window).on('resize', debounce(onResize, 200))
 
 // const fancyboxContainer = new PerfectSB($('.fancybox-slide'))
 // const searchMainList = new PerfectSB('.modal__search-main-result-list')
@@ -249,7 +249,6 @@ $('.select-field select').each((idx, item) => {
     $(this).attr('data-selected', '')
   })
 })
-
 
 // $('.company-map__underlayer').parallax({
 //   mirrorContainer: '.company-map__mirror-container',
@@ -334,6 +333,7 @@ $(document).on('click', function (e) {
 $(document).on('click', '.company-map__popup-close', function () {
   $(this).parents('.company-map__place').removeClass('opened')
 })
+
 
 const headerMenuMobile = new PerfectSB($('.header__menu-mobile'))
 
@@ -510,6 +510,7 @@ class MainSearchModal {
     $('#search-main').parent().removeClass('is--opened')
     $('.modal-custom__overlay').eq(0).removeClass('is--visible')
     $('.header').removeClass('is--hidden')
+    $('#search-main').parent().scrollTop(0)
     searchMainPS.destroy()
   }
 
