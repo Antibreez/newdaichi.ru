@@ -14,50 +14,33 @@
   </head>
 
   <body>
-    <main style="padding: 50px 0">
+    <main style="padding: 100px 0">
       
       
-      <div class="container"><h3>Блок ввода ".input-field"</h3>
-<div class="input-field">
-  <input type="text" name="name" id="name" />
-  <label for="name">Label</label>
-  <span class="input-field__error">Текст ошибки</span>
-  <span class="input-field__note">Подсказка описание для поля ввода</span>
-  <span class="input-field__outline"></span>
-</div>
-<br />
-<h3>Блок ввода ".input-field" с ошибкой</h3>
-<div class="input-field is--invalid">
-  <input type="text" name="name1" id="name1" value="Name 1" />
-  <label for="name1">Label</label>
-  <span class="input-field__error">Текст ошибки</span>
-  <span class="input-field__note">Подсказка описание для поля ввода</span>
-  <span class="input-field__outline"></span>
-</div>
-<br />
-<h3>Блок ввода ".input-field" disabled</h3>
-<div class="input-field is--invalid">
-  <input type="text" name="name2" id="name2" value="Name 2" disabled />
-  <label for="name2">Label</label>
-  <span class="input-field__error">Текст ошибки</span>
-  <span class="input-field__note">Подсказка описание для поля ввода</span>
-  <span class="input-field__outline"></span>
-</div>
-<br />
-<h3>Поиск ".input-field is--search" disabled</h3>
-<div class="input-field is--search">
-  <div class="input-field__icon">
-    <svg><use xlink:href="./img/sprite.svg#search"></use></svg>
-  </div>
-  <input type="text" name="name2" id="name2" placeholder="Поиск" />
-  <span class="input-field__error">Текст ошибки</span>
-  <span class="input-field__note">Подсказка описание для поля ввода</span>
-  <span class="input-field__outline"></span>
-  <button class="input-field__clear-button">
-    <svg><use xlink:href="./img/sprite.svg#close"></use></svg>
-  </button>
-</div>
-</div>
+      <div class="container">
+        <div class="field">
+          <label class="field-input-radio">
+            <input type="checkbox" value="radio-1" name="radio" id="radio-1" />
+            <span>Radio button 1
+
+              
+                <span class="filter-section__count">29</span>
+              
+            </span>
+          </label>
+        </div>
+
+        <div class="field">
+          <label class="field-input-radio">
+            <input type="checkbox" value="radio-2" name="radio" id="radio-2" />
+            <span>Radio button 2
+
+              
+            </span>
+          </label>
+        </div>
+
+      </div>
     </main>
     <div class="footer">
       <div class="footer__container container">

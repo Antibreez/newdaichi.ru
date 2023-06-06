@@ -14,48 +14,76 @@
   </head>
 
   <body>
-    <main style="padding: 50px 0">
+    <main style="padding: 100px 0">
       
       
-      <div class="container"><h3>Блок ввода ".input-field"</h3>
-<div class="input-field">
-  <input type="text" name="name" id="name" />
-  <label for="name">Label</label>
-  <span class="input-field__error">Текст ошибки</span>
-  <span class="input-field__note">Подсказка описание для поля ввода</span>
-  <span class="input-field__outline"></span>
-</div>
-<br />
-<h3>Блок ввода ".input-field" с ошибкой</h3>
-<div class="input-field is--invalid">
-  <input type="text" name="name1" id="name1" value="Name 1" />
-  <label for="name1">Label</label>
-  <span class="input-field__error">Текст ошибки</span>
-  <span class="input-field__note">Подсказка описание для поля ввода</span>
-  <span class="input-field__outline"></span>
-</div>
-<br />
-<h3>Блок ввода ".input-field" disabled</h3>
-<div class="input-field is--invalid">
-  <input type="text" name="name2" id="name2" value="Name 2" disabled />
-  <label for="name2">Label</label>
-  <span class="input-field__error">Текст ошибки</span>
-  <span class="input-field__note">Подсказка описание для поля ввода</span>
-  <span class="input-field__outline"></span>
-</div>
-<br />
-<h3>Поиск ".input-field is--search" disabled</h3>
-<div class="input-field is--search">
-  <div class="input-field__icon">
-    <svg><use xlink:href="./img/sprite.svg#search"></use></svg>
-  </div>
-  <input type="text" name="name2" id="name2" placeholder="Поиск" />
-  <span class="input-field__error">Текст ошибки</span>
-  <span class="input-field__note">Подсказка описание для поля ввода</span>
-  <span class="input-field__outline"></span>
-  <button class="input-field__clear-button">
-    <svg><use xlink:href="./img/sprite.svg#close"></use></svg>
-  </button>
+      <div class="container"><div class="company-map" style="background-image: url('img/map-underlayer.png')">
+  <!-- <div class="company-map__mirror-container"></div>
+  <div class="company-map__underlayer">
+    <img class="parallax-slider" src="./img/map-underlayer.png" alt="Карта" />
+  </div> -->
+  <img class="company-map__overlayer" src="./img/map-overlayer.svg" alt="Карта" />
+
+  <div class="company-map__places"></div>
+
+  <template id="map-place">
+    <div class="company-map__place">
+      <button class="company-map__pin-btn">
+        <svg><use xlink:href="./img/sprite.svg#map-pin"></use></svg>
+      </button>
+      <div class="company-map__popup">
+        <button class="company-map__popup-close">
+          <svg><use xlink:href="img/sprite.svg#close"></use></svg>
+        </button>
+        <div class="company-map__popup-header">
+          <img src="./img/daichi-logo.svg" alt="Daichi" />
+          <span class="company-map__popup-city"></span>
+        </div>
+        <div class="company-map__popup-items">
+          <div class="company-map__popup-item">
+            <span class="company-map__popup-label">Адрес</span>
+            <span class="company-map__popup-text"></span>
+          </div>
+          <div class="company-map__popup-item">
+            <span class="company-map__popup-label">Телефон</span>
+            <span class="company-map__popup-text">
+              <a href=""></a>
+            </span>
+          </div>
+          <div class="company-map__popup-item">
+            <span class="company-map__popup-label">Почта</span>
+            <span class="company-map__popup-text">
+              <a href=""></a>
+            </span>
+          </div>
+        </div>
+        <div class="company-map__popup-bottom">
+          <a href="#" class="company-map__popup-about-link">Подробнее →</a>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    const companyMapBranches = [
+      {
+        x: 19.17,
+        y: 34.54,
+        name: 'Нижний Новгород',
+        address: '603116 г. Нижний Новгород, ул. Маршала Казакова д. 5',
+        telephone: '+7&nbsp;831&nbsp;216-37-08',
+        email: 'info@nnov.daichi.ru',
+      },
+      {
+        x: 15.58,
+        y: 38.9,
+        name: 'Москва',
+        address: 'Москва',
+        telephone: '+7&nbsp;495&nbsp;737-37-33',
+        email: 'info@daichi.ru',
+      },
+    ]
+  </script>
 </div>
 </div>
     </main>

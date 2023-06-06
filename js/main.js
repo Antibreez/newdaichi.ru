@@ -250,6 +250,32 @@ $('.select-field select').each((idx, item) => {
   })
 })
 
+$(window).on('load', function () {
+  const $anchorLinks = $('a[href^="#"]')
+
+  const scrollToAnchor = $block => {
+    $('html,body').animate(
+      {
+        scrollTop: $block.offset().top,
+      },
+      'slow'
+    )
+  }
+
+  $anchorLinks.on('click', function (e) {
+    e.preventDefault()
+
+    const name = $(this).attr('href').substring(1)
+
+    const $block = $(`[data-id='${name}']`)
+
+    if ($block.length) {
+      scrollToAnchor($block)
+    }
+  })
+})
+
+
 // $('.company-map__underlayer').parallax({
 //   mirrorContainer: '.company-map__mirror-container',
 //   // naturalWidth: '2350px',
@@ -314,8 +340,6 @@ try {
   console.log('catch')
 }
 
-console.log('next')
-
 $(document).on('click', '.company-map__pin-btn', function () {
   if ($(this).parent().hasClass('opened')) {
     $(this).parent().removeClass('opened')
@@ -333,7 +357,6 @@ $(document).on('click', function (e) {
 $(document).on('click', '.company-map__popup-close', function () {
   $(this).parents('.company-map__place').removeClass('opened')
 })
-
 
 const headerMenuMobile = new PerfectSB($('.header__menu-mobile'))
 
@@ -469,7 +492,7 @@ const mainSlider = new Swiper('.main-slider__slides', {
 })
 
 const mainNavSliderMobile = new Swiper('.main-slider--mobile .main-slider__nav', {
-  freeMode: true,
+  // freeMode: true,
   slidesPerView: 'auto',
   pagination: {
     el: '.main-slider--mobile .main-slider__nav .main-slider__progressbar',
@@ -478,7 +501,7 @@ const mainNavSliderMobile = new Swiper('.main-slider--mobile .main-slider__nav',
 })
 
 const mainSliderMobile = new Swiper('.main-slider__mobile-slides', {
-  freeMode: true,
+  // freeMode: true,
   slidesPerView: 'auto',
   pagination: {
     el: '.main-slider__mobile-slides .main-slider__progressbar',
@@ -552,7 +575,7 @@ const mainSearchModal = new MainSearchModal()
 // }
 
 const newsSlider = new Swiper('.news-articles__slides', {
-  freeMode: true,
+  // freeMode: true,
   slidesPerView: 'auto',
   pagination: {
     el: '.news-articles .main-slider__progressbar',
